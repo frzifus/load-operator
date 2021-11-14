@@ -3,4 +3,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: kubebuilder
 repo: load-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: klimlive.de
+  group: work
+  kind: WorkDeployment
+  path: load-operator/api/v1
+  version: v1
 version: "3"

@@ -1,0 +1,24 @@
+# permissions for end users to edit workdeployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workdeployment-editor-role
+rules:
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments/status
+  verbs:
+  - get

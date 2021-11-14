@@ -1,0 +1,20 @@
+# permissions for end users to view workdeployments.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workdeployment-viewer-role
+rules:
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments/status
+  verbs:
+  - get
