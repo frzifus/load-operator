@@ -27,15 +27,18 @@ import (
 type WorkDeploymentSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of WorkDeployment. Edit workdeployment_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Name         string `json:"Name,omitempty"`
+	TargetLoad   uint8  `json:"TargetLoad,omitempty"`
+	TargetMemory uint16 `json:"TargetMemory,omitempty"`
 }
 
 // WorkDeploymentStatus defines the observed state of WorkDeployment
 type WorkDeploymentStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Name         string `json:"Name,omitempty"`
+	TargetLoad   uint8  `json:"TargetLoad,omitempty"`
+	TargetMemory uint16 `json:"TargetMemory,omitempty"`
 }
 
 //+kubebuilder:object:root=true
