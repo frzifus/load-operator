@@ -3,4 +3,6 @@ kind: WorkDeployment
 metadata:
   name: workdeployment-sample
 spec:
-  # TODO(user): Add fields here
+  Name: "test worker"
+  TargetLoad: 10 # %
+  TargetMemory: 512 # MB
