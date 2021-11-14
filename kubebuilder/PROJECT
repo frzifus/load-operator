@@ -1,0 +1,6 @@
+domain: klimlive.de
+layout:
+- go.kubebuilder.io/v3
+projectName: kubebuilder
+repo: load-operator
+version: "3"
