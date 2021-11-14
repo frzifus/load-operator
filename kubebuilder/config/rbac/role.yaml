@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - work.klimlive.de
+  resources:
+  - workdeployments/status
+  verbs:
+  - get
+  - patch
+  - update
